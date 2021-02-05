@@ -1,21 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campground show</title>
-</head>
-<body>
-    <h1>Campground details</h1>
-    <h2><%= campground.title %></h2>
+<% layout('layout/boilerplate') %> 
+    <div >
+        <h1 class=""><%= campground.title %>    </h1>
+        <h7 class="text-muted">2 days ago</h7>
+    </div>
+    <hr>
+    <br>
+    <div class="d-flex justify-content-center">
+        <img class="img-fluid col-md-6" src="<%= campground.image %>" alt="">
+    </div>
+    <br>
+    <hr>
+    <br>
     <p><%= campground.location %></p>
 
-    <a href="/campgrounds">Go back</a>
+    <h4>Price: <%= campground.price %>$ per night</h4>
+    <p><%= campground.description %></p>
+    
+
+    <a class="btn btn-primary" href="/campgrounds">Go back</a>
+    <a class="btn btn-warning" href="/campgrounds/<%= campground.id %>/edit">Edit</a>
     <br>
-    <a href="/campgrounds/<%= campground.id %>/edit">Edit</a>
     <br>
     <form action="/campgrounds/<%=campground.id%>?_method=DELETE" method="POST">
-        <button>Delete</button>
+        <button class="btn btn-danger">Delete</button>
     </form>
-</body>
-</html>
+    <br>
+    <br>
