@@ -1,8 +1,7 @@
 <% layout('layout/boilerplate') %> 
 <h1>All Campgrounds</h1>
-
-<br>
-<a href="/campgrounds/new">Create a new campground</a>
+<hr>
+<a class="btn btn-success" href="/campgrounds/new">Create a new campground</a>
 
 <hr>
 
@@ -20,7 +19,7 @@
                         <p class="card-text">
                             <small class="text-muted"><%= campground.location %></small>
                         </p>
-                        <a href="/campgrounds/<%= campground.id %>" class="btn btn-primary">View details</a>
+                        <a href="/campgrounds/<%= campground.id %>" class="btn btn-info">View details</a>
                     </div>
                 </div>
             </div>

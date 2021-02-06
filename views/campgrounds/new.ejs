@@ -3,26 +3,56 @@
 <div class="col-md-6 offset-md-3">
     <h1>Create new campground</h1>
     <hr>
-    <form action="/campgrounds" method="POST">
+    <form action="/campgrounds" method="POST" novalidate class="needs-validation">
         <div class="mb-3">
             <label for="title">Title: </label>
-            <input class="form-control" type="text" id="title" name="campground[title]">
+            <input class="form-control" type="text" id="title" name="campground[title]" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please provide a title.
+            </div>
         </div>
         <div class="mb-3">
             <label for="location">Location: </label>
-            <input class="form-control" type="text" id="location" name="campground[location]">
+            <input class="form-control" type="text" id="location" name="campground[location]" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please provide a location.
+            </div>
         </div>
         <div class="mb-3">
             <label for="price">Price: </label>
-            <input class="form-control" type="text" id="price" name="campground[price]">
+            <input class="form-control" type="text" id="price" name="campground[price]" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please enter valid a price.
+            </div>
         </div>
         <div class="mb-3">
             <label for="image">Image URL: </label>
-            <input class="form-control" type="text" id="image" name="campground[image]">
+            <input class="form-control" type="text" id="image" name="campground[image]" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please provide an image URL.
+            </div>
         </div>
         <div class="mb-3">
             <label for="description">Description: </label>
-            <textarea class="form-control" type="text" id="description" name="campground[description]" rows=5></textarea>
+            <textarea class="form-control" type="text" id="description" name="campground[description]" rows=5 required></textarea>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please provide a description.
+            </div>
         </div>
         <button type="submit" class="btn btn-success">Add Campground</button>
         <a class="btn btn-warning" href="/campgrounds">Go back</a>
